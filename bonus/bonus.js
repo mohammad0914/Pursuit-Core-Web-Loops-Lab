@@ -17,11 +17,9 @@ Take one down, pass it around, No more bottle of beer on the wall.
  * 
  */
 
- function ninetyNineBottlesOfBeerOnTheWall() {
+function ninetyNineBottlesOfBeerOnTheWall() {}
 
- }
-
- /**
+/**
   * Given an integer N draw a square of N x N asterisks. Look at the examples.
 * @param {number} N 
 * @return {array}
@@ -42,14 +40,18 @@ Output:
     ***
 ]
   */
- function drawSquare() {
-
- }
- /**
+function drawSquare() {}
+/**
   * If we list all the natural numbers below 10 that are multiples of 3 or 5,
   *  we get 3, 5, 6 and 9. The sum of these multiples is 23.
 
     Find the sum of all the multiples of 3 or 5 below 1000.
   */
 
-  function multiplesOf3And5Sum() {}
+function multiplesOf3And5Sum() {}
+
+module.exports = {
+  ninetyNineBottlesOfBeerOnTheWall,
+  drawSquare,
+  multiplesOf3And5Sum,
+};
