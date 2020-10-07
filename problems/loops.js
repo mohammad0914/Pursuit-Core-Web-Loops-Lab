@@ -1,5 +1,5 @@
 /**
- * Takes in a number a returns an array filled with all numbers from 1 to given number (inclusive).
+ * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
  * Must be written with a while loop
  * @param {number}
  * @returns {array}
@@ -7,7 +7,7 @@
 function oneTillDoneWhileLoop() {}
 
 /**
- * Takes in a number a returns an array filled with all numbers from 1 to given number (inclusive).
+ * Takes in a number and returns an array filled with all numbers from 1 to given number (inclusive).
  * Must be written with a for loop
  * @param {number}
  * @returns {array}
@@ -15,7 +15,7 @@ function oneTillDoneWhileLoop() {}
 function oneTillDoneForLoop() {}
 
 /**
- * Takes in a number a returns an array filled with all numbers from number to 0 (exclusive)
+ * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
  * Must be a while loop
  * @param {number}
  * @returns {array}
@@ -23,7 +23,7 @@ function oneTillDoneForLoop() {}
 function doneToZeroWhileLoop() {}
 
 /**
- * Takes in a number a returns an array filled with all numbers from number to 0 (exclusive)
+ * Takes in a number and returns an array filled with all numbers from number to 0 (exclusive)
  * Must be written with a for loop
  * @param {number}
  * @returns {array}
@@ -102,6 +102,8 @@ function endsWithFiveWhileLoop() {}
 
  */
 function endsWithFiveForLoop() {}
+// Try refactoring the code above to increment your i by 10 and starting at 5. 
+
 
 
 /**
@@ -220,7 +222,7 @@ function firstIndexFound() {}
  * @param {number or string} target 
  * @returns {number} last index found.
  */
-function firstIndexFound() {}
+function lastIndexFound() {}
 
 /**
  * Takes in an array. 
@@ -241,5 +243,31 @@ function timesIndex() {}
  * @param {array} elements 
  * @returns {array}
  */
-function timesIndex() {}
+function cumulativeSum() {}
 
+
+
+module.exports = {
+  oneTillDoneWhileLoop,
+  oneTillDoneForLoop,
+  doneToZeroWhileLoop,
+  doneToZeroForLoop,
+  evenAndOddWhileLoop,
+  evenAndOddForLoop,
+  tillXTimes9WhileLoop,
+  tillXTimes9ForLoop,
+  endsWithFiveWhileLoop,
+  endsWithFiveForLoop,
+  fizzBuzzPart1,
+  fizzBuzzPart2,
+  rangeSum,
+  rangeOdd,
+  rangeEveryOther,
+  containsWhileLoop,
+  containsForLoop,
+  targetCount,
+  firstIndexFound,
+  lastIndexFound,
+  timesIndex,
+  cumulativeSum,
+};
