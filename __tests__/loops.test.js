@@ -208,7 +208,6 @@ describe("endsWithFiveForLoop", () => {
 describe("fizzBuzzPart1", () => {
   test("returns an array of length 100", () => {
     expect(fizzBuzzPart1().length).toBe(100);
-
   });
   test("returns correct array", () => {
     const arr = Array(100)
@@ -219,22 +218,77 @@ describe("fizzBuzzPart1", () => {
         else return i + 1;
       });
     expect(fizzBuzzPart1()).toEqual(arr);
-  })
+  });
 });
 describe("fizzBuzzPart2", () => {
   test("returns an array of length 100", () => {
     expect(fizzBuzzPart2().length).toBe(100);
-
   });
   test("returns correct array", () => {
     const arr = Array(100)
       .fill(null)
       .map((_, i) => {
         if(!((i + 1) % 3) && !((i + 1) % 5)) return "FizzBuzz"
-        else if ((i + 1) % 3) return "Fizz";
-        else if ((i + 1) % 5) return "Buzz";
+        else if (!((i + 1) % 3)) return "Fizz";
+        else if (!((i + 1) % 5)) return "Buzz";
         else return i + 1;
       });
     expect(fizzBuzzPart2()).toEqual(arr);
-  })
+  });
+});
+
+describe("rangeSum", () => {
+  test("returns sum of all numbers between min and max inclusive", () => {
+    expect(rangeSum(2, 3)).toBe(5);
+    expect(rangeSum(10, 12)).toBe(33);
+    expect(rangeSum(1, 5)).toBe(15);
+  });
+});
+
+describe("rangeOdd", () => {
+  test("returns only odd numbers in decreasing order", () => {
+    expect(rangeOdd(2, 3)).toEqual([3]);
+    expect(rangeOdd(10, 26)).toEqual([25, 23, 21, 19, 17, 15, 13, 11]);
+    expect(rangeOdd(1, 5)).toEqual([5, 3, 1]);
+  });
+});
+
+describe("rangeEveryOther", () => {
+  test("returns every other num in range in increasing order", () => {
+    expect(rangeEveryOther(2, 3)).toEqual([2]);
+    expect(rangeEveryOther(10, 26)).toEqual([
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+    ]);
+    expect(rangeEveryOther(1, 6)).toEqual([1, 3, 5]);
+  });
+});
+
+describe("containsWhileLoop", () => {
+  test("returns true for found elements", () => {
+    expect(containsWhileLoop([5, 2, 3, 5, 9], 3)).toBe(true);
+    expect(containsWhileLoop(["cat", "dog", "bird"], "cat")).toBe(true);
+  });
+  test("returns false for not found elements", () => {
+    expect(containsWhileLoop([5, 2, 3, 5, 9], 6)).toBe(false);
+    expect(containsWhileLoop(["cat", "dog", "bird"], "whale")).toBe(false);
+  });
+
+  test("is written with a while loop", () => {
+    const funcString = containsWhileLoop.toString();
+    expect(funcString.includes("while")).toBe(true);
+    expect(funcString.includes("for")).toBe(false);
+  });
+
+  test("does not use built in includes method", () => {
+    const funcString = containsWhileLoop.toString();
+    expect(funcString.includes("includes")).toBe(false);
+  });
 });
