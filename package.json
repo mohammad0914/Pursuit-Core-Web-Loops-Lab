@@ -4,8 +4,8 @@
   "description": "To complete this lab, do the following:",
   "main": "index.js",
   "scripts": {
-    "test": "jest --runInBand",
-    "bonus": "jest --runInBand bonus/bonus.test.js"
+    "test": "jest --runInBand --verbose tests/",
+    "bonus": "jest --runInBand --verbose bonus/bonus.test.js"
   },
   "repository": {
     "type": "git",
