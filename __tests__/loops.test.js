@@ -287,9 +287,10 @@ describe("containsWhileLoop", () => {
     expect(funcString.includes("for")).toBe(false);
   });
 
-  test("does not use built in includes method", () => {
+  test("is implemented and does not use built in includes method", () => {
     const funcString = containsWhileLoop.toString();
     expect(funcString.includes("includes")).toBe(false);
+    expect(funcString !== "function containsWhileLoop() {}").toBe(true)
   });
 });
 
@@ -309,9 +310,10 @@ describe("containsForLoop", () => {
     expect(funcString.includes("for")).toBe(true);
   });
 
-  test("does not use built in includes method", () => {
+  test("is implemented and does not use built in includes method", () => {
     const funcString = containsForLoop.toString();
     expect(funcString.includes("includes")).toBe(false);
+    expect(funcString !== "function containsForLoop() {}").toBe(true)
   });
 });
 
