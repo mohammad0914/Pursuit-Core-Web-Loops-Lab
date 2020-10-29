@@ -2,7 +2,7 @@
 
 
 # Loops Lab
-Let's practice our for loops and while loops! 
+Let's practice our for loops and while loops! [Documentation link](https://joinpursuit.github.io/loops_assignment/)
 
 ## Learning Objectives 
 * Be familiar with loops 
