@@ -165,7 +165,7 @@ describe("tillXTimes9ForLoop", () => {
 
 describe("endsWithFiveWhileLoop", () => {
   test("returns an array from 1 to 100 with only numbers that end in 5", () => {
-    expect(endsWithFiveWhileLoop(5)).toEqual([
+    expect(endsWithFiveWhileLoop()).toEqual([
       5,
       15,
       25,
@@ -186,7 +186,7 @@ describe("endsWithFiveWhileLoop", () => {
 });
 describe("endsWithFiveForLoop", () => {
   test("returns an array from 1 to 100 with only numbers that end in 5", () => {
-    expect(endsWithFiveForLoop(5)).toEqual([
+    expect(endsWithFiveForLoop()).toEqual([
       5,
       15,
       25,
